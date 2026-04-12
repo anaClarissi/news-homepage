@@ -38,11 +38,55 @@ body {
 
 .navbar-toggler {
     border: none;
+    z-index: 1060;
+}
+
+.navbar-toggler[aria-expanded="true"] #menu-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/images/icon-menu-close.svg');
+    background-size: cover;
 }
 
 
+#menu-icon {
+    width: 40px;
+    height: 20px;
+    background-image: url('../assets/images/icon-menu.svg');
+    background-size: cover;
+}
+
+#navbar-items {
+    z-index: 1050;
+}
+
+#navbar-items.show {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    padding: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-white);
+}
+
+#navbar-items.show::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 35vw;
+    height: 100vh;
+    background-color: #00000060;
+}
+
 .nav-link {
-    color: var(--dark-grayish-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--very-dark-blue);
 }
 
 .nav-link:hover {
