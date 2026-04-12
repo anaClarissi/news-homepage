@@ -364,12 +364,8 @@ main {
 
 @media (min-width: 1600px) {
 
-    #header {
+    #header, main {
         padding: 3em 20em !important;
-    }
-
-    main {
-        padding: 0 20em !important;
     }
     
 }
