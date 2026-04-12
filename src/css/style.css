@@ -64,7 +64,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 60vw;
+    width: 65%;
     height: 100vh;
     padding: 2.5em;
     display: flex;
@@ -78,7 +78,7 @@ body {
     top: 0;
     left: 0;
     content: "";
-    width: 35vw;
+    width: 35%;
     height: 100vh;
     background-color: #00000060;
 }
