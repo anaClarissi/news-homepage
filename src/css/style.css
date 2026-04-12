@@ -28,7 +28,7 @@ body {
 /* HEADER */
 
 #header {
-    padding: 1em 0 !important;
+    padding: 1em !important;
 }
 
 #logo {
@@ -96,8 +96,7 @@ body {
 @media (min-width: 960px) {
     
     #header {
-        padding-top: 5em !important;
-        padding-bottom: 3em !important;
+        padding: 3em 10em !important;
     }
 
     .navbar-nav {
@@ -105,6 +104,7 @@ body {
     }
 
     .nav-link {
+        color: var(--dark-grayish-blue);
         font-weight: 500;
     }
 
@@ -115,10 +115,11 @@ body {
 
 /* PRINCIPAL CONTENT */
 
-main.container {
+main {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    padding: 1em;
 }
 
 #principal-content {
@@ -132,6 +133,7 @@ main.container {
     font-weight: 800;
     line-height: 1em;
     margin-top: 0.5em;
+    color: var(--very-dark-blue);
 }
 
 #principal-content p {
@@ -141,6 +143,9 @@ main.container {
 }
 
 #btn-read-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60%;
     padding: 0.5em;
     font-size: 0.9rem;
@@ -151,8 +156,6 @@ main.container {
     background-color: var(--soft-red);
     border-radius: 0;
 }
-
-
 
 /* NEWS CONTENT */
 
@@ -172,13 +175,15 @@ main.container {
 .content-cards {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
     gap: 1em;
 }
 
 .content-cards h3 {
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--grayish-blue);
+    color: var(--off-white);
 }
 
 .content-cards p {
@@ -200,44 +205,161 @@ main.container {
 
 #cards-area {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1em;
+    height: fit-content;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "img title"
-    "img subtitle"
-    "img txt"
-    ;
-    column-gap: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    height: fit-content;
     border: none;
 }
 
+.card div {
+    display: flex;
+    flex-direction: column;
+}
+
 .card h2 {
-    grid-area: title;
     font-size: 2rem;
     font-weight: 700;
     color: var(--soft-red);
 }
 
 .card h3 {
-    grid-area: subtitle;
     font-size: 0.95rem;
     font-weight: 800;
     color: var(--very-dark-blue);
 }
 
 .card p {
-    grid-area: txt;
     font-size: 0.75rem;
     color: var(--dark-grayish-blue);
 }
 
 .card-img {
+    width: 25%;
     height: auto;
-    grid-area: img;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (min-width: 960px) {
+
+    main {
+        padding: 0 10em;
+    }
+    
+}
+
+@media (min-width: 1280px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        "principal news"
+        "cards cards"
+        ;
+    }
+
+    #principal-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "principal-img principal-img"
+        "principal-title principal-txt"
+        "principal-title principal-btn"
+        ;
+        grid-area: principal;
+        column-gap: 7em;
+        row-gap: 1.5em;
+    }
+
+    #principal-content picture {
+        grid-area: principal-img;
+    }
+
+    #principal-content h1 {
+        font-size: 4rem;
+        word-spacing: 0.5rem;
+        margin-top: 0;
+        grid-area: principal-title;
+    }
+
+    #principal-content p {
+        font-size: 1.1rem;
+        grid-area: principal-txt;
+    }
+
+    #principal-content a {
+        font-size: 1rem;
+        grid-area: principal-btn;
+    }
+
+    #news-content {
+        grid-area: news;
+        padding: 2em 1.5em;
+        gap: 2em;
+    }
+
+    #news-content h2 {
+        font-size: 3rem;
+    }
+
+    .content-cards h3 {
+        font-size: 1.5rem;
+    }
+
+    .content-cards p {
+        font-size: 1.1rem;
+    }
+
+    #cards-area {
+        grid-area: cards;
+        flex-direction: row;
+    }
+
+    .card h2 {
+        font-size: 2.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .card-img {
+        width: 110px;
+        height: 140px;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    body {
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
+
+    #header {
+        padding: 3em 20em !important;
+    }
+
+    main {
+        padding: 0 20em !important;
+        gap: 2.5em;
+    }
+    
 }
