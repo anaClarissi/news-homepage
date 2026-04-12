@@ -302,7 +302,7 @@ main {
     }
 
     #principal-content h1 {
-        font-size: 4rem;
+        font-size: 3.855rem;
         word-spacing: 0.5rem;
         margin-top: 0;
         grid-area: principal-title;
@@ -339,6 +339,7 @@ main {
     #cards-area {
         grid-area: cards;
         flex-direction: row;
+        height: fit-content !important;
     }
 
     .card h2 {
@@ -363,18 +364,12 @@ main {
 
 @media (min-width: 1600px) {
 
-    body {
-        max-height: 100vh;
-        overflow-y: hidden;
-    }
-
     #header {
         padding: 3em 20em !important;
     }
 
     main {
         padding: 0 20em !important;
-        gap: 2.5em;
     }
     
 }
