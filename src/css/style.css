@@ -376,10 +376,6 @@ main {
 
 @media (min-width: 1600px) {
 
-    body {
-        overflow-y: hidden;
-    }
-
     #header, main {
         padding: 1em 20em !important;
     }
