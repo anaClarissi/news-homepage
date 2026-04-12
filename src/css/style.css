@@ -22,3 +22,47 @@ body {
     font-size: 1rem;
     font-weight: normal;
 }
+
+
+
+/* HEADER */
+
+#header {
+    padding: 1em 0 !important;
+}
+
+#logo {
+    width: 15vw;
+    max-width: 80px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+
+.nav-link {
+    color: var(--dark-grayish-blue);
+}
+
+.nav-link:hover {
+    color: var(--soft-red);
+}
+
+@media (min-width: 960px) {
+    
+    #header {
+        padding-top: 5em !important;
+        padding-bottom: 3em !important;
+    }
+
+    .navbar-nav {
+        gap: 2em;
+    }
+
+    .nav-link {
+        font-weight: 500;
+    }
+
+
+}
