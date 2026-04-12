@@ -216,6 +216,7 @@ main {
 #cards-area {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 1em;
     height: fit-content;
 }
@@ -293,7 +294,7 @@ main {
         "principal-title principal-btn"
         ;
         grid-area: principal;
-        column-gap: 7em;
+        column-gap: 1.5em;
         row-gap: 1.5em;
     }
 
@@ -343,7 +344,8 @@ main {
     }
 
     .card {
-        padding: 0 1em;
+        height: 150px;
+        padding: 1em 0;
     }
 
     .card h2 {
@@ -361,7 +363,7 @@ main {
 
     .card-img {
         width: 110px;
-        height: 140px;
+        height: 150px;
     }
 
 }
