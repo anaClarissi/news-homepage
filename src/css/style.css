@@ -294,8 +294,8 @@ main {
         "principal-title principal-btn"
         ;
         grid-area: principal;
-        column-gap: 1.5em;
-        row-gap: 1.5em;
+        column-gap: 1em;
+        row-gap: 1em;
     }
 
     #principal-content picture {
@@ -340,7 +340,9 @@ main {
     #cards-area {
         grid-area: cards;
         flex-direction: row;
+        gap: 2em;
         height: fit-content !important;
+        width: 100%;
     }
 
     .card {
