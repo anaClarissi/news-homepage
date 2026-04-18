@@ -44,7 +44,7 @@ Users should be able to:
 ### 🔗 Links
 
 * Solution URL: https://www.frontendmentor.io/solutions/your-solution
-* Live Site URL: https://your-live-site-url.com
+* Live Site URL: https://anaclarissi.github.io/news-homepage
 
 ---
 
